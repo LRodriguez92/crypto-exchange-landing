@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import Header from './components/Header';
 import Features from './components/Features';
 import ExchangeTable from './components/ExchangeTable';
+import CTA from './components/CTA';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Features />
       <ExchangeTable />
+      <CTA />
     </div>
   );
 }
