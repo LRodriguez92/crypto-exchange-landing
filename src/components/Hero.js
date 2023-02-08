@@ -30,38 +30,29 @@ export default function Hero() {
       </svg>
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <img
-            className="h-11"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-            alt="Your Company"
-          />
-          <div className="mt-24 sm:mt-32 lg:mt-16">
-            <a href="/" className="inline-flex space-x-6">
-              <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
-                What's new
-              </span>
-              <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
-                <span>Just shipped v1.0</span>
-                <ChevronRightIcon className="h-5 w-5 text-gray-500" aria-hidden="true" />
-              </span>
-            </a>
-          </div>
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Deploy to the cloud with confidence
+          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-7xl">
+            Make easier <br/> crypto exchange <br /> with us
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
+          <p className="mt-6 text-sm leading-8 text-slate-400 leading-relaxed">
+            Find your answers instantly in our Support Center. <br />
+            Or reach us 24/7/365 on Live Chat. LGO makes it easy <br />
+            to buy and sell crypto using us.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="/"
-              className="rounded-md bg-indigo-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+              className="w-52 h-14 flex justify-center items-center bg-black px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
             >
-              Get started
+              Exchange
             </a>
-            <a href="/" className="text-base font-semibold leading-7 text-white">
-              Learn more <span aria-hidden="true">→</span>
+            <a href="/" className="flex items-center text-base leading-7 text-white">
+            <span aria-hidden="true" className='mr-2'>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+              </svg>
+            </span> 
+            Learn how to start
             </a>
           </div>
         </div>
