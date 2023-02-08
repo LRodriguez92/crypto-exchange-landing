@@ -42,7 +42,7 @@ const currencies = [
   
   export default function ExchangeTable() {
     return (
-      <div className="px-4 sm:px-6 lg:px-[100px] mx-auto max-w-7xl mt-28">
+      <div className="px-4 sm:px-6 lg:px-[100px] mx-auto max-w-7xl mt-28 mb-14">
         <div className="sm:flex sm:items-center">
           <div className="sm:flex-auto">
             <h1 className="text-4xl font-bold text-black">Exchange any <br /> of 1000+ pairs</h1>
@@ -88,7 +88,7 @@ const currencies = [
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#a999b42c] bg-transparent">
+                  <tbody className="divide-y divide-[#635a6928] bg-transparent">
                     {currencies.map((currency) => (
                       <tr key={currency.email}>
                         <td className="whitespace-nowrap py-4 pr-3 text-sm">
