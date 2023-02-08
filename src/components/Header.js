@@ -63,13 +63,13 @@ function classNames(...classes) {
 export default function Header() {
   return (
     <Popover className="relative bg-transparent">
-      <div className="flex items-center justify-between p-6 md:justify-start md:space-x-10">
-        <div className="flex justify-start lg:w-0 lg:flex-1">
+      <div className="2xl:mx-[200px] flex items-center justify-between p-6 md:justify-start md:space-x-10">
+        <div className="2xl:mr-80 flex justify-start lg:w-0 lg:flex-1">
           <a href="/">
             <span className="sr-only">Your Company</span>
             <img
               className="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              src="./images/lgo.PNG"
               alt=""
             />
           </a>
@@ -84,21 +84,15 @@ export default function Header() {
           <Popover className="relative">
             {({ open }) => (
               <>
-                <Popover.Button
+                <a
+                  href="/"
                   className={classNames(
-                    open ? 'text-gray-900' : 'text-gray-500',
+                    open ? 'text-gray-900' : 'text-white',
                     'group inline-flex items-center rounded-md bg-transparent text-base font-medium hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                   )}
                 >
                   <span>Solutions</span>
-                  <ChevronDownIcon
-                    className={classNames(
-                      open ? 'text-gray-600' : 'text-gray-400',
-                      'ml-2 h-5 w-5 group-hover:text-gray-500'
-                    )}
-                    aria-hidden="true"
-                  />
-                </Popover.Button>
+                </a>
 
                 <Transition
                   as={Fragment}
@@ -148,31 +142,25 @@ export default function Header() {
             )}
           </Popover>
 
-          <a href="/" className="text-base font-medium text-gray-500 hover:text-white">
-            Pricing
+          <a href="/" className="text-base font-medium text-white hover:text-white">
+            Send Money
           </a>
-          <a href="/" className="text-base font-medium text-gray-500 hover:text-white">
-            Docs
+          <a href="/" className="text-base font-medium text-white hover:text-white">
+            Prices
           </a>
 
           <Popover className="relative">
             {({ open }) => (
               <>
-                <Popover.Button
+                <a
+                  href="/"
                   className={classNames(
-                    open ? 'text-gray-900' : 'text-gray-500',
+                    open ? 'text-gray-900' : 'text-white',
                     'group inline-flex items-center rounded-md bg-transparent text-base font-medium hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                   )}
                 >
-                  <span>More</span>
-                  <ChevronDownIcon
-                    className={classNames(
-                      open ? 'text-gray-600' : 'text-gray-400',
-                      'ml-2 h-5 w-5 group-hover:text-gray-500'
-                    )}
-                    aria-hidden="true"
-                  />
-                </Popover.Button>
+                  <span>Business</span>
+                </a>
 
                 <Transition
                   as={Fragment}
@@ -205,13 +193,15 @@ export default function Header() {
           </Popover>
         </Popover.Group>
         <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <a href="/" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-white">
-            Sign in
-          </a>
           <a
             href="/"
-            className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+            className="w-36 h-14 ml-8 inline-flex items-center justify-center whitespace-nowrap border border-transparent bg-[#1A1A1A] px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
           >
+            <span className='mr-2'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            </span>
             Sign up
           </a>
         </div>
