@@ -1,41 +1,43 @@
-const people = [
+import Chart from "./Chart.tsx"
+
+const currencies = [
     {
-      name: 'Lindsay Walton',
-      title: 'Front-end Developer',
-      department: 'Optimization',
-      email: 'lindsay.walton@example.com',
-      role: 'Member',
+      name: 'Bitcoin',
+      price: '$ 29,231.26',
+      ticker: 'BTC',
+      change: '+ 2.11%',
+      marketCap: '$ 442.24B',
       image:
         'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Flogos-and-brands%2F512%2F45_Bitcoin_logo_logos-512.png&f=1&nofb=1&ipt=cf23ea6fa1543cb950134f3e8b6c198d23100942f5fe1d43ee7941aacd5d378c&ipo=images',
     },
     {
-      name: 'Lindsay Walton',
-      title: 'Front-end Developer',
-      department: 'Optimization',
-      email: 'lindsay.walton@example.com',
-      role: 'Member',
+      name: 'Ethereum',
+      price: '$ 1,515.01',
+      ticker: 'ETH',
+      change: '+ 5.51%',
+      marketCap: '$ 200.32B',
       image:
         'https://cdn.iconscout.com/icon/free/png-512/ethereum-3521413-2944857.png',
     },
     {
-      name: 'Lindsay Walton',
-      title: 'Front-end Developer',
-      department: 'Optimization',
-      email: 'lindsay.walton@example.com',
-      role: 'Member',
+      name: 'Tether',
+      price: '$ 1,649.59',
+      ticker: 'USDT',
+      change: '+ 2.04%',
+      marketCap: '$ 199.84B',
       image:
         'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.icons8.com%2Fcolor%2F2x%2Ftether.png&f=1&nofb=1&ipt=2c3eda005bde711ef0e708b70587126adf0a93f14f8591e327308605b20497a6&ipo=images',
     },
     {
-      name: 'Lindsay Walton',
-      title: 'Front-end Developer',
-      department: 'Optimization',
-      email: 'lindsay.walton@example.com',
-      role: 'Member',
+      name: 'Dogecoin',
+      price: '$ 0.85',
+      ticker: 'DOGE',
+      change: '+ 3.20%',
+      marketCap: '$ 12.28B',
       image:
         'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-download.com%2Fwp-content%2Fuploads%2F2018%2F04%2FDogeCoin_logo_dog.png&f=1&nofb=1&ipt=224a776e6266b625c44b56ce76b07283774a288b922157e93603e45db97b472f&ipo=images',
     },
-    // More people...
+    // More currencies...
   ]
   
   export default function ExchangeTable() {
@@ -45,7 +47,7 @@ const people = [
           <div className="sm:flex-auto">
             <h1 className="text-xl font-semibold text-gray-900">Users</h1>
             <p className="mt-2 text-sm text-gray-700">
-              A list of all the users in your account including their name, title, email and role.
+              A list of all the users in your account including their name, price, email and marketCap.
             </p>
           </div>
           <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
@@ -68,47 +70,55 @@ const people = [
                         Name
                       </th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Title
+                        Price
                       </th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Status
+                        Change
                       </th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Role
+                        Market cap
                       </th>
-                      <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
-                        <span className="sr-only">Edit</span>
+                      <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                        Buy
+                      </th>
+                      <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                        Chart
                       </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#a999b42c] bg-transparent">
-                    {people.map((person) => (
-                      <tr key={person.email}>
+                    {currencies.map((currency) => (
+                      <tr key={currency.email}>
                         <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                           <div className="flex items-center">
                             <div className="h-10 w-10 flex-shrink-0 rounded-full bg-black flex justify-center items-center">
-                              <img className="h-6 w-6  rounded-full" src={person.image} alt="" />
+                              <img className="h-6 w-6  rounded-full" src={currency.image} alt="" />
                             </div>
                             <div className="ml-4">
-                              <div className="font-medium text-gray-900">{person.name}</div>
-                              <div className="text-gray-500">{person.email}</div>
+                              <div className="font-medium text-gray-900 font-bold">{currency.name}</div>
+                              <div className="text-gray-500">{currency.ticker}</div>
                             </div>
                           </div>
                         </td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                          <div className="text-gray-900">{person.title}</div>
-                          <div className="text-gray-500">{person.department}</div>
+                          <div className="text-gray-900 font-bold">{currency.price}</div>
                         </td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                          <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-                            Active
-                          </span>
+                            <div className="text-gray-900 font-bold">{currency.change}</div>
                         </td>
-                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.role}</td>
-                        <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                          <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                            Edit<span className="sr-only">, {person.name}</span>
-                          </a>
+                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                        <div className="text-gray-900 font-bold">{currency.marketCap}</div>
+                        </td>
+                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                        <button
+                            type="button"
+                            className="inline-flex items-center justify-center w-16 h-8 border border-transparent bg-black px-4 py-2 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        >
+                            Buy
+                        </button>
+                        </td>
+                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                            <Chart width={100} height={50} />
                         </td>
                       </tr>
                     ))}
