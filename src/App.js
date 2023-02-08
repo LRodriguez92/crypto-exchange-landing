@@ -1,6 +1,7 @@
 import Hero from './components/Hero';
 import Header from './components/Header';
 import Features from './components/Features';
+import ExchangeTable from './components/ExchangeTable';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <Features />
+      <ExchangeTable />
     </div>
   );
 }
