@@ -42,20 +42,22 @@ const currencies = [
   
   export default function ExchangeTable() {
     return (
-      <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl mt-28">
+      <div className="px-4 sm:px-6 lg:px-[100px] mx-auto max-w-7xl mt-28">
         <div className="sm:flex sm:items-center">
           <div className="sm:flex-auto">
-            <h1 className="text-xl font-semibold text-gray-900">Users</h1>
-            <p className="mt-2 text-sm text-gray-700">
-              A list of all the users in your account including their name, price, email and marketCap.
-            </p>
+            <h1 className="text-4xl font-bold text-black">Exchange any <br /> of 1000+ pairs</h1>
           </div>
           <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-            <button
-              type="button"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
+          <button
+                type="button"
+                className="h-10 inline-flex items-center border border-transparent bg-[#0000000c] px-4 py-2 text-xs font-bold text-black hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
-              Add user
+                View all 216+ assets
+                <span className="ml-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -2 24 24" strokeWidth={3} stroke="currentColor" className="w-3 h-3">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </span>
             </button>
           </div>
         </div>
@@ -66,7 +68,7 @@ const currencies = [
                 <table className="min-w-full divide-y divide-transparent">
                   <thead className="bg-transparent">
                     <tr>
-                      <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                      <th scope="col" className="py-3.5pr-3 text-left text-sm font-semibold text-gray-900">
                         Name
                       </th>
                       <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
@@ -89,7 +91,7 @@ const currencies = [
                   <tbody className="divide-y divide-[#a999b42c] bg-transparent">
                     {currencies.map((currency) => (
                       <tr key={currency.email}>
-                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
+                        <td className="whitespace-nowrap py-4 pr-3 text-sm">
                           <div className="flex items-center">
                             <div className="h-10 w-10 flex-shrink-0 rounded-full bg-black flex justify-center items-center">
                               <img className="h-6 w-6  rounded-full" src={currency.image} alt="" />
@@ -117,7 +119,7 @@ const currencies = [
                             Buy
                         </button>
                         </td>
-                        <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                        <td className="w-[88px] whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                             <Chart width={100} height={50} />
                         </td>
                       </tr>
