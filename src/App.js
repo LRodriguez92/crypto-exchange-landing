@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Features from './components/Features';
 import ExchangeTable from './components/ExchangeTable';
 import CTA from './components/CTA';
+import Logos from './components/Logos';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <ExchangeTable />
       <CTA />
+      <Logos />
     </div>
   );
 }
