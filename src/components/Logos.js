@@ -1,6 +1,6 @@
 export default function Logos() {
     return (
-      <div className="bg-[#BAB8F9]">
+      <div className="bg-[#BAB8F9] py-24">
         <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8">
             <div className="flex justify-between mb-16">
                 <h1 className="text-4xl font-bold">Our Clients</h1>

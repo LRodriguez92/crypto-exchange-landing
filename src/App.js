@@ -4,6 +4,7 @@ import Features from './components/Features';
 import ExchangeTable from './components/ExchangeTable';
 import CTA from './components/CTA';
 import Logos from './components/Logos';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ExchangeTable />
       <CTA />
       <Logos />
+      <Footer />
     </div>
   );
 }
