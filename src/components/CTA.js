@@ -2,9 +2,9 @@
 export default function CTA() {
     return (
       <div className="bg-white">
-        <div className="mx-auto max-w-full
+        <div className="mx-auto max-w-full bg-gray-900
         ">
-          <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-32 lg:pt-0">
+          <div className="mx-auto max-w-7xl relative isolate overflow-hidden bg-gray-900 px-6 pt-16sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-32 lg:pt-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1024 1024"
@@ -31,15 +31,8 @@ export default function CTA() {
                 the LGO team.
               </h2>
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                <a
-                  href="#"
-                  className="rounded-md bg-white px-3.5 py-1.5 text-base font-semibold leading-7 text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                >
-                  Get started
-                </a>
-                <a href="#" className="text-base font-semibold leading-7 text-white">
-                  Learn more <span aria-hidden="true">→</span>
-                </a>
+                <img src="./images/black_apple.svg" alt="apple store" />
+                <img className="w-[150px]" src="./images/google-play-badge.png" alt="google play store"/>
               </div>
             </div>
             {/* <div className="relative mt-16 h-80 lg:mt-8">
